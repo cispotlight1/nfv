@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label '6.3'
+      label 'linux'
     }
     
   }
