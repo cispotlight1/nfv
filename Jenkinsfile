@@ -1,14 +1,14 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven'
-    }
-    
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean install -DskipTests'
+        sh 'sudo mvn clean install -DskipTests'
+      }
+    }
+    stage('') {
+      steps {
+        sh 'sudo docker login -u=cispotlight -p=Ravadijay@801'
       }
     }
   }
